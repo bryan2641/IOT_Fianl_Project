@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{%- block styles %}
+<link rel="stylesheet" href="{{ url_for('user_access.static', filename='css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('user_access.static', filename='css/index.css') }}">
+{%- endblock styles %}
+
+{% block container -%}
+<br>
+<div class="row row-cols-auto">
+    
+    <!--LEFT-->
+    <div class="col-auto row-cols-auto">
+
+        <img class="camera" id="rgb">
+
+    </div>
+
+    <!--RIGHT-->
+    <div class="col-sm-5 text-left row-cols-auto">
+        
+        <div class="row">
+
+            <div class="col-sm-auto">
+                <legend>Information</legend>
+                <textarea id="info" cols="40" rows="10" style="font-size:15px;"></textarea>
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+
+            <div class="col-sm-auto">
+                <button type="button" class="btn btn-default" onclick="Capture()" style="font-size: 15px;">Capture Real-Time Images</button>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+{%- endblock container %}
+
+{% block scripts %}
+
+<script src="{{ url_for('user_access.static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('user_access.static', filename='js/popper.min.js') }}"></script>
+<script src="{{ url_for('user_access.static', filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('user_access.static', filename='js/socket.io.min.js') }}"></script>
+<script src="{{ url_for('user_access.static', filename='js/index.js') }}"></script>
+
+{%- endblock scripts %}

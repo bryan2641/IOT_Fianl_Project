@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{%- block styles %}
+  <link rel="stylesheet" href="{{ url_for('user_access.static', filename='css/bootstrap.min.css') }}">
+{%- endblock styles %}
+
+{% block container -%}
+  <form method="post" action="/user_access/login">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="flash">
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    <title>Login</title>
+    <br>
+    <div class="form-group row">
+      <label for="user_id" class="col-2 offset-1 col-form-label">Login as :</label>
+      <div class="col-3">
+        <input type="text" class="form-control" id="user_id" name="user_id" placeholder="user">
+        <small class="form-text">提示： User</small>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="password" class="col-2 offset-1 col-form-label">Password:</label>
+      <div class="col-3">
+        <input type="password" class="form-control" id="password" name="password" placeholder="password">
+        <small class="form-text">提示： user</small>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-2 offset-3">
+        <button type="submit" class="btn btn-dirty-purple">登入</button>
+      </div>
+    </div>
+  </form>
+
+  <!--<div class="container">
+    <label for="psw">Username</label>
+    <input type="username" id="username" name="username" required>
+    <br><br><br>
+    <label for="psw">Password</label>
+    <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+    <input type="submit" value="Login">
+  </div>-->
+  <div class="form-group row">
+    <div class="col-2 offset-1">
+      <p>Don't have an account? <a href="register">Register</a></p>
+    </div>
+  </div>
+{%- endblock container %}
+

@@ -1,0 +1,7 @@
+.camera {
+    height: 300px;
+    /*width: 300px;*/
+    margin: 10px auto;
+    table-layout:fixed;
+    transform:rotate(0deg);
+}
