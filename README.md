@@ -68,5 +68,3 @@ python3 final_demo.py
 
 ## Contributor
 @bryan2641
-
-###### ヽ(#`Д´)ﾉ組員是要不要做事啦?
