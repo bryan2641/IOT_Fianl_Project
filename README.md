@@ -7,8 +7,10 @@
 本專案來自 智慧物聯網技術與應用 National Dong Hwa University CSIE。
 
 ## Platform
-####Framework
-![image]https://github.com/bryan2641/IOT_Fianl_Project/blob/main/framework.png
+
+#### Framework
+
+![image](https://github.com/bryan2641/IOT_Fianl_Project/blob/main/framework.png)
 
 1.  ESP-8266：一款非常流行的低成本Wi-Fi模組
 2.	溫溼度感測器：用於監測環境的溫度和濕度，並可以結合其他感測器進行火災的預防
