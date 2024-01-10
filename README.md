@@ -24,14 +24,26 @@
 10.	樹莓派：作為即時視訊的網站架設平台
 11.	攝影機
 
+## Content
 
-## Installation
+`ESP-8266_Code` 裡面是所有ESP-8266的程式碼，包含單獨感測器以及Mesh Network(Root及三個節點)。
+`flows.json` 是Node-Red的主結構。
+
+`IOT_Backend` 及 `IOT_RPI` 則是遭棄用的網頁後端框架與樹莓派的程式碼。
+
+## Quick-Start
+### 1. Installation
 
 Execute the following command to get the source code.
 
 ```shell
 git clone https://github.com/bryan2641/IOT_Fianl_Project.git
 ```
+
+### 2. Execution
+
+ESP-8266：在 Arduino IDE 中開啟 `.ino` 
+Node-Red：將 `flows.json` 匯入，選擇流程4，並在節點管理中安裝 `node-red-contrib-line-notify-api` 、 `node-red-dashboard` 、 `node-red-node-serialport` ，並根據 ESP-8266 連接之 Serial Port 選擇對應即可
 
 ## Contributor
 @bryan2641
