@@ -49,10 +49,21 @@ git clone https://github.com/bryan2641/IOT_Fianl_Project.git
 
 * **即時串流網頁框架**：
 ```shell
-cd /Your Path/IOT_Backend/
+## Server：
+cd /Your_Path/IOT_Backend/
+
 python3 -m venv venv
-pip3 install -r requirements.txt
+pip install -r requirements.txt
+
 python.py manage.py runserver
+
+
+## RPI：
+cd /Your_Path/IOT_RPI/
+
+pip install socketIO_client opencv-python
+
+python3 final_demo.py
 ```
 
 ## Contributor
