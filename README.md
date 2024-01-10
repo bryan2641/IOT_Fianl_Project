@@ -30,7 +30,6 @@
 
 `flows.json` 是Node-Red的主結構。
 
-
 `IOT_Backend` 及 `IOT_RPI` 則是遭棄用的網頁後端框架與樹莓派的程式碼。
 
 ## Quick-Start
@@ -44,9 +43,17 @@ git clone https://github.com/bryan2641/IOT_Fianl_Project.git
 
 ### 2. Execution
 
-ESP-8266：在 Arduino IDE 中開啟 `.ino` 
+* **ESP-8266**：在 Arduino IDE 中開啟 `.ino` 
 
-Node-Red：將 `flows.json` 匯入，選擇流程4，並在節點管理中安裝 `node-red-contrib-line-notify-api` 、 `node-red-dashboard` 、 `node-red-node-serialport` ，並根據 ESP-8266 連接之 Serial Port 選擇對應即可
+* **Node-Red**：將 `flows.json` 匯入，選擇流程4，並在節點管理中安裝 `node-red-contrib-line-notify-api` 、 `node-red-dashboard` 、 `node-red-node-serialport` ，並根據 ESP-8266 連接之 Serial Port 選擇對應即可
+
+* **即時串流網頁框架**：
+```shell
+cd /Your Path/IOT_Backend/
+python3 -m venv venv
+pip3 install -r requirements.txt
+python.py manage.py runserver
+```
 
 ## Contributor
 @bryan2641
