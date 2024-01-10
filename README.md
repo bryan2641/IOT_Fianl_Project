@@ -33,4 +33,5 @@ Execute the following command to get the source code.
 git clone https://github.com/bryan2641/IOT_Fianl_Project.git
 ```
 
-## 
+## Contributor
+@bryan2641
