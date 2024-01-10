@@ -1,10 +1,12 @@
 # IOT Final Project
 
-#### 112-1 智慧物聯網技術與應用 第9組 期末專案
+##居家智能監測系統
+
+### 112-1 智慧物聯網技術與應用 第9組 期末專案
 
 本專案來自 智慧物聯網技術與應用 National Dong Hwa University CSIE。
 
-### Platform
+## Platform
 
 1.  ESP-8266：一款非常流行的低成本Wi-Fi模組
 2.	溫溼度感測器：用於監測環境的溫度和濕度，並可以結合其他感測器進行火災的預防
@@ -19,10 +21,11 @@
 11.	攝影機
 
 
-### Installation
+## Installation
 
 Execute the following command to get the source code.
 
 ```shell
 git clone https://github.com/bryan2641/IOT_Fianl_Project.git
 ```
+## 
