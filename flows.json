@@ -1,0 +1,1834 @@
+[
+    {
+        "id": "2f0e81cbe057cd87",
+        "type": "tab",
+        "label": "流程1",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "52a097b8d61ffa49",
+        "type": "tab",
+        "label": "流程2",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2909590d0f263a64",
+        "type": "tab",
+        "label": "流程3",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "021dbc39094a6840",
+        "type": "tab",
+        "label": "流程4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "283275f875e5c356",
+        "type": "ui_tab",
+        "name": "教室",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "fd756b9f4efd0d80",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "f26eb8057c25e530",
+        "type": "ui_group",
+        "name": "燈光",
+        "tab": "283275f875e5c356",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6986102dbc3d3b7e",
+        "type": "serial-port",
+        "name": "COM8",
+        "serialport": "COM8",
+        "serialbaud": "115200",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "739b18e4f804bca6",
+        "type": "ui_group",
+        "name": "溫度",
+        "tab": "283275f875e5c356",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f57ff2ebd787ba72",
+        "type": "ui_group",
+        "name": "濕度",
+        "tab": "283275f875e5c356",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6a3db6982a8273b7",
+        "type": "ui_group",
+        "name": "土壤濕度",
+        "tab": "283275f875e5c356",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "385e389ea9e86a7c",
+        "type": "mqtt-broker",
+        "name": "mqttgo.io",
+        "broker": "mqttgo.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "6122872a18d026fe",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2469cbac36b5299a",
+        "type": "ui_group",
+        "name": "溫度",
+        "tab": "6122872a18d026fe",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9b573bda709074a1",
+        "type": "ui_group",
+        "name": "濕度",
+        "tab": "6122872a18d026fe",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8c55436ef8432657",
+        "type": "ui_group",
+        "name": "燈光",
+        "tab": "6122872a18d026fe",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d60cc949cfad43ba",
+        "type": "ui_group",
+        "name": "一氧化碳",
+        "tab": "6122872a18d026fe",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "88d623eef425163d",
+        "type": "ui_group",
+        "name": "可燃氣體",
+        "tab": "6122872a18d026fe",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6110f714ed230460",
+        "type": "ui_group",
+        "name": "懸浮微粒",
+        "tab": "6122872a18d026fe",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "de523886c0427f88",
+        "type": "serial out",
+        "z": "2f0e81cbe057cd87",
+        "name": "COM8",
+        "serial": "6986102dbc3d3b7e",
+        "x": 1010,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "0290f91bb7dc67fc",
+        "type": "ui_switch",
+        "z": "2f0e81cbe057cd87",
+        "name": "",
+        "label": "開關燈",
+        "tooltip": "",
+        "group": "f26eb8057c25e530",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": true,
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": false,
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 870,
+        "y": 360,
+        "wires": [
+            [
+                "de523886c0427f88",
+                "85652136b7cf67b8"
+            ]
+        ]
+    },
+    {
+        "id": "85652136b7cf67b8",
+        "type": "debug",
+        "z": "2f0e81cbe057cd87",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "ab6b746d74d1afcf",
+        "type": "serial in",
+        "z": "52a097b8d61ffa49",
+        "name": "COM8",
+        "serial": "6986102dbc3d3b7e",
+        "x": 410,
+        "y": 440,
+        "wires": [
+            [
+                "bfa2dcd2e16d9380"
+            ]
+        ]
+    },
+    {
+        "id": "bfa2dcd2e16d9380",
+        "type": "csv",
+        "z": "52a097b8d61ffa49",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 550,
+        "y": 440,
+        "wires": [
+            [
+                "29067f2ead9caf8a",
+                "06e0a2aa30a569aa"
+            ]
+        ]
+    },
+    {
+        "id": "a2d90b6b774e769e",
+        "type": "ui_gauge",
+        "z": "52a097b8d61ffa49",
+        "name": "",
+        "group": "739b18e4f804bca6",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "溫度",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 870,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "62f32159dc197c83",
+        "type": "ui_chart",
+        "z": "52a097b8d61ffa49",
+        "name": "",
+        "group": "f57ff2ebd787ba72",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "濕度",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 870,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "29067f2ead9caf8a",
+        "type": "debug",
+        "z": "52a097b8d61ffa49",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "06e0a2aa30a569aa",
+        "type": "function",
+        "z": "52a097b8d61ffa49",
+        "name": "function 1",
+        "func": "var msg1 = {payload:msg.payload.col1};\nvar msg2 = {payload:msg.payload.col2};\nreturn [msg1, msg2];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 440,
+        "wires": [
+            [
+                "a2d90b6b774e769e",
+                "4c76ab108ea530e8"
+            ],
+            [
+                "62f32159dc197c83"
+            ]
+        ]
+    },
+    {
+        "id": "6eea724abb3bd205",
+        "type": "line_notify_api",
+        "z": "52a097b8d61ffa49",
+        "name": "Line",
+        "accessToken": "PonVRq8pcKSqU9xBqHekkY375tVkdT8jpHt0wc4VU6K",
+        "stickerPackageId": "",
+        "stickerId": "",
+        "x": 1090,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4c76ab108ea530e8",
+        "type": "switch",
+        "z": "52a097b8d61ffa49",
+        "name": "溫度超過25度",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "25",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 900,
+        "y": 340,
+        "wires": [
+            [
+                "6eea724abb3bd205"
+            ]
+        ]
+    },
+    {
+        "id": "3ebf8e9dcb6da708",
+        "type": "serial in",
+        "z": "2909590d0f263a64",
+        "name": "COM8",
+        "serial": "6986102dbc3d3b7e",
+        "x": 610,
+        "y": 480,
+        "wires": [
+            [
+                "6b54b570ddbf4c5d",
+                "d95da76e37f91ea5",
+                "04bb321a4cabedfe"
+            ]
+        ]
+    },
+    {
+        "id": "6b54b570ddbf4c5d",
+        "type": "ui_gauge",
+        "z": "2909590d0f263a64",
+        "name": "",
+        "group": "6a3db6982a8273b7",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "土壤濕度",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 800,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "d95da76e37f91ea5",
+        "type": "ui_chart",
+        "z": "2909590d0f263a64",
+        "name": "",
+        "group": "6a3db6982a8273b7",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "土壤濕度",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 800,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "26a49dc446f4ec6e",
+        "type": "mqtt in",
+        "z": "2909590d0f263a64",
+        "name": "",
+        "topic": "611221241/class/土壤濕度",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "385e389ea9e86a7c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 670,
+        "y": 600,
+        "wires": [
+            [
+                "3257a945b7311b7c"
+            ]
+        ]
+    },
+    {
+        "id": "04bb321a4cabedfe",
+        "type": "mqtt out",
+        "z": "2909590d0f263a64",
+        "name": "",
+        "topic": "611221241/class/土壤濕度",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "385e389ea9e86a7c",
+        "x": 860,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "3257a945b7311b7c",
+        "type": "debug",
+        "z": "2909590d0f263a64",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "c246eca2e33f80eb",
+        "type": "serial in",
+        "z": "021dbc39094a6840",
+        "name": "COM8",
+        "serial": "6986102dbc3d3b7e",
+        "x": 370,
+        "y": 340,
+        "wires": [
+            [
+                "44997a3463b81690"
+            ]
+        ]
+    },
+    {
+        "id": "44997a3463b81690",
+        "type": "csv",
+        "z": "021dbc39094a6840",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 490,
+        "y": 340,
+        "wires": [
+            [
+                "18c0154468311cb2",
+                "59dd73598e776503",
+                "43fe7bdeae3c2cbd"
+            ]
+        ]
+    },
+    {
+        "id": "520ab4b1b2da2b7b",
+        "type": "ui_chart",
+        "z": "021dbc39094a6840",
+        "name": "",
+        "group": "2469cbac36b5299a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "溫度",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1070,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6c78a6b3de947f2d",
+        "type": "ui_chart",
+        "z": "021dbc39094a6840",
+        "name": "",
+        "group": "9b573bda709074a1",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "濕度",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1070,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4a629058e67ea407",
+        "type": "ui_chart",
+        "z": "021dbc39094a6840",
+        "name": "",
+        "group": "8c55436ef8432657",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "燈光",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1070,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f783c74180569623",
+        "type": "ui_chart",
+        "z": "021dbc39094a6840",
+        "name": "",
+        "group": "d60cc949cfad43ba",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "一氧化碳",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1080,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "de226c419ef35018",
+        "type": "ui_chart",
+        "z": "021dbc39094a6840",
+        "name": "",
+        "group": "6110f714ed230460",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "懸浮微粒(PM2.5)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1110,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "88c280971323f807",
+        "type": "ui_gauge",
+        "z": "021dbc39094a6840",
+        "name": "",
+        "group": "2469cbac36b5299a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "溫度",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1070,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "3282fa233e4fefb4",
+        "type": "ui_gauge",
+        "z": "021dbc39094a6840",
+        "name": "",
+        "group": "9b573bda709074a1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "濕度",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1070,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "c6e2a3dcdb527886",
+        "type": "ui_chart",
+        "z": "021dbc39094a6840",
+        "name": "",
+        "group": "88d623eef425163d",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "可燃氣體",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1080,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "59dd73598e776503",
+        "type": "function",
+        "z": "021dbc39094a6840",
+        "name": "function 2",
+        "func": "var msg1 = { payload: msg.payload.col1 };\nvar msg2, msg3, msg4, msg5;\n\nif(parseFloat(msg1.payload) == 1){\n    msg2 = { payload: msg.payload.col2 };\n    msg3 = { payload: msg.payload.col3 };\n    msg4 = { payload: msg.payload.col4 };\n    msg5 = { payload: msg.payload.col5 };\n    return [msg2, msg3, msg4, msg5];\n}",
+        "outputs": 4,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 280,
+        "wires": [
+            [
+                "88c280971323f807",
+                "520ab4b1b2da2b7b",
+                "d473179180bab5c1",
+                "80c67ae934881661"
+            ],
+            [
+                "3282fa233e4fefb4",
+                "6c78a6b3de947f2d",
+                "99064640efdea901"
+            ],
+            [
+                "4a629058e67ea407",
+                "2af8abfa40a3a654"
+            ],
+            [
+                "f783c74180569623",
+                "abc257b269793fcb"
+            ]
+        ]
+    },
+    {
+        "id": "18c0154468311cb2",
+        "type": "debug",
+        "z": "021dbc39094a6840",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "2af8abfa40a3a654",
+        "type": "switch",
+        "z": "021dbc39094a6840",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "100",
+                "vt": "str"
+            },
+            {
+                "t": "lte",
+                "v": "100",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 850,
+        "y": 500,
+        "wires": [
+            [
+                "559a27e5d6c209f4"
+            ],
+            [
+                "32d637959b640a74"
+            ]
+        ]
+    },
+    {
+        "id": "229df3fbc4a07d74",
+        "type": "line_notify_api",
+        "z": "021dbc39094a6840",
+        "name": "LineNotify",
+        "accessToken": "Pt0cwaajeFNQeNUzLynBKsnQvx24CVD4Xtnbmb9lpLH",
+        "stickerPackageId": "",
+        "stickerId": "",
+        "x": 1300,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a4779a5d5bf2c912",
+        "type": "serial out",
+        "z": "021dbc39094a6840",
+        "name": "COM8",
+        "serial": "6986102dbc3d3b7e",
+        "x": 1290,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "54f0051f44bd827e",
+        "type": "ui_switch",
+        "z": "021dbc39094a6840",
+        "name": "",
+        "label": "開關燈",
+        "tooltip": "",
+        "group": "8c55436ef8432657",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1070,
+        "y": 620,
+        "wires": [
+            [
+                "a4779a5d5bf2c912",
+                "76f8fb95d1f9190a"
+            ]
+        ]
+    },
+    {
+        "id": "76f8fb95d1f9190a",
+        "type": "debug",
+        "z": "021dbc39094a6840",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1300,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "559a27e5d6c209f4",
+        "type": "trigger",
+        "z": "021dbc39094a6840",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "num",
+        "op2type": "str",
+        "duration": "0",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1090,
+        "y": 500,
+        "wires": [
+            [
+                "a4779a5d5bf2c912",
+                "76f8fb95d1f9190a"
+            ]
+        ]
+    },
+    {
+        "id": "32d637959b640a74",
+        "type": "trigger",
+        "z": "021dbc39094a6840",
+        "name": "",
+        "op1": "0",
+        "op2": "0",
+        "op1type": "num",
+        "op2type": "str",
+        "duration": "0",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1090,
+        "y": 540,
+        "wires": [
+            [
+                "a4779a5d5bf2c912",
+                "76f8fb95d1f9190a"
+            ]
+        ]
+    },
+    {
+        "id": "43fe7bdeae3c2cbd",
+        "type": "function",
+        "z": "021dbc39094a6840",
+        "name": "function 3",
+        "func": "var msg1 = { payload: msg.payload.col1 };\nvar msg2, msg3;\n\nif(parseFloat(msg1.payload) == 2){\n    msg2 = { payload: msg.payload.col2 };\n    msg3 = { payload: msg.payload.col3 };\n    return [msg2, msg3];\n}",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 340,
+        "wires": [
+            [
+                "c6e2a3dcdb527886",
+                "3fadd36571ba3ecc"
+            ],
+            [
+                "de226c419ef35018",
+                "b206a9f0cb460fc0"
+            ]
+        ]
+    },
+    {
+        "id": "99064640efdea901",
+        "type": "switch",
+        "z": "021dbc39094a6840",
+        "name": "濕度大於60",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "60",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 870,
+        "y": 920,
+        "wires": [
+            [
+                "a5805361b351e409",
+                "b973823f4253f582"
+            ]
+        ]
+    },
+    {
+        "id": "abc257b269793fcb",
+        "type": "switch",
+        "z": "021dbc39094a6840",
+        "name": "一氧化碳濃度大於1000",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "1000",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 900,
+        "y": 1100,
+        "wires": [
+            [
+                "e87400131126e961",
+                "a7437aca2b44d19a"
+            ]
+        ]
+    },
+    {
+        "id": "5a000a8438131a37",
+        "type": "switch",
+        "z": "021dbc39094a6840",
+        "name": "溫度大於40",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "30",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1090,
+        "y": 760,
+        "wires": [
+            [
+                "229df3fbc4a07d74",
+                "e25427dc7dd092aa"
+            ]
+        ]
+    },
+    {
+        "id": "d473179180bab5c1",
+        "type": "switch",
+        "z": "021dbc39094a6840",
+        "name": "溫度大於30",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "30",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 870,
+        "y": 720,
+        "wires": [
+            [
+                "467a7238c80fa8e2",
+                "5a000a8438131a37"
+            ]
+        ]
+    },
+    {
+        "id": "467a7238c80fa8e2",
+        "type": "function",
+        "z": "021dbc39094a6840",
+        "name": "開冷氣",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9fd87c43cacebc5a",
+        "type": "serial out",
+        "z": "021dbc39094a6840",
+        "name": "COM8",
+        "serial": "6986102dbc3d3b7e",
+        "x": 1510,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "e25427dc7dd092aa",
+        "type": "trigger",
+        "z": "021dbc39094a6840",
+        "name": "",
+        "op1": "2",
+        "op2": "0",
+        "op1type": "num",
+        "op2type": "str",
+        "duration": "2000",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1310,
+        "y": 820,
+        "wires": [
+            [
+                "9fd87c43cacebc5a"
+            ]
+        ]
+    },
+    {
+        "id": "3b05dd255c8720e7",
+        "type": "trigger",
+        "z": "021dbc39094a6840",
+        "name": "",
+        "op1": "3",
+        "op2": "0",
+        "op1type": "num",
+        "op2type": "str",
+        "duration": "2000",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1310,
+        "y": 1040,
+        "wires": [
+            [
+                "d716083fa4019648"
+            ]
+        ]
+    },
+    {
+        "id": "d716083fa4019648",
+        "type": "serial out",
+        "z": "021dbc39094a6840",
+        "name": "COM8",
+        "serial": "6986102dbc3d3b7e",
+        "x": 1470,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "8f66aea332df7369",
+        "type": "line_notify_api",
+        "z": "021dbc39094a6840",
+        "name": "LineNotify",
+        "accessToken": "ejTc0D3MOJRDroz1MWk1JdXGQ0ZS6pbPE1WSgY93kV3",
+        "stickerPackageId": "",
+        "stickerId": "",
+        "x": 1300,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e87400131126e961",
+        "type": "line_notify_api",
+        "z": "021dbc39094a6840",
+        "name": "LineNotify",
+        "accessToken": "VUqm2D2sG6TdW9F27qGbTCTlZ9Bzs90rHoImT1YX7JW",
+        "stickerPackageId": "",
+        "stickerId": "",
+        "x": 1300,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a7437aca2b44d19a",
+        "type": "trigger",
+        "z": "021dbc39094a6840",
+        "name": "",
+        "op1": "4",
+        "op2": "0",
+        "op1type": "num",
+        "op2type": "str",
+        "duration": "2000",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1090,
+        "y": 1160,
+        "wires": [
+            [
+                "dbbeadac2ccb7a5d"
+            ]
+        ]
+    },
+    {
+        "id": "dbbeadac2ccb7a5d",
+        "type": "serial out",
+        "z": "021dbc39094a6840",
+        "name": "COM8",
+        "serial": "6986102dbc3d3b7e",
+        "x": 1290,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "3fadd36571ba3ecc",
+        "type": "switch",
+        "z": "021dbc39094a6840",
+        "name": "可燃氣體濃度大於370",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "370",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 900,
+        "y": 1220,
+        "wires": [
+            [
+                "7124fa2f9e910954",
+                "03928b292608a775"
+            ]
+        ]
+    },
+    {
+        "id": "b206a9f0cb460fc0",
+        "type": "switch",
+        "z": "021dbc39094a6840",
+        "name": "懸浮微粒大於50",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "50",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 880,
+        "y": 1340,
+        "wires": [
+            [
+                "77e3b29097518970",
+                "d5e370ca4ba4a6a1"
+            ]
+        ]
+    },
+    {
+        "id": "7124fa2f9e910954",
+        "type": "line_notify_api",
+        "z": "021dbc39094a6840",
+        "name": "LineNotify",
+        "accessToken": "wOcyTAHlxC2YG4Tm5LLmq8BAUL8fQC6pyDo8dSeq9Uo",
+        "stickerPackageId": "",
+        "stickerId": "",
+        "x": 1300,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "03928b292608a775",
+        "type": "trigger",
+        "z": "021dbc39094a6840",
+        "name": "",
+        "op1": "5",
+        "op2": "0",
+        "op1type": "num",
+        "op2type": "str",
+        "duration": "2000",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1090,
+        "y": 1280,
+        "wires": [
+            [
+                "415d729f2b588a6e"
+            ]
+        ]
+    },
+    {
+        "id": "415d729f2b588a6e",
+        "type": "serial out",
+        "z": "021dbc39094a6840",
+        "name": "COM8",
+        "serial": "6986102dbc3d3b7e",
+        "x": 1290,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "53059858a3e335d9",
+        "type": "line_notify_api",
+        "z": "021dbc39094a6840",
+        "name": "LineNotify",
+        "accessToken": "teL8ZBo7jJfPsrMTejCeyN6FI7NJc3uc0Fu77V27EE0",
+        "stickerPackageId": "",
+        "stickerId": "",
+        "x": 1300,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a8b91712efe09adc",
+        "type": "trigger",
+        "z": "021dbc39094a6840",
+        "name": "",
+        "op1": "6",
+        "op2": "0",
+        "op1type": "num",
+        "op2type": "str",
+        "duration": "2000",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1310,
+        "y": 1460,
+        "wires": [
+            [
+                "31cf858bd4769bc5"
+            ]
+        ]
+    },
+    {
+        "id": "31cf858bd4769bc5",
+        "type": "serial out",
+        "z": "021dbc39094a6840",
+        "name": "COM8",
+        "serial": "6986102dbc3d3b7e",
+        "x": 1470,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "80c67ae934881661",
+        "type": "switch",
+        "z": "021dbc39094a6840",
+        "name": "溫度小於20",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "20",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 870,
+        "y": 860,
+        "wires": [
+            [
+                "5b7d8a81ae6ed684"
+            ]
+        ]
+    },
+    {
+        "id": "5b7d8a81ae6ed684",
+        "type": "function",
+        "z": "021dbc39094a6840",
+        "name": "開暖氣",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a5805361b351e409",
+        "type": "function",
+        "z": "021dbc39094a6840",
+        "name": "開除濕機",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b973823f4253f582",
+        "type": "switch",
+        "z": "021dbc39094a6840",
+        "name": "濕度大於80",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "80",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1090,
+        "y": 980,
+        "wires": [
+            [
+                "8f66aea332df7369",
+                "3b05dd255c8720e7"
+            ]
+        ]
+    },
+    {
+        "id": "77e3b29097518970",
+        "type": "function",
+        "z": "021dbc39094a6840",
+        "name": "開空氣清淨機",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d5e370ca4ba4a6a1",
+        "type": "switch",
+        "z": "021dbc39094a6840",
+        "name": "懸浮微粒大於100",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "100",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1110,
+        "y": 1400,
+        "wires": [
+            [
+                "53059858a3e335d9",
+                "a8b91712efe09adc"
+            ]
+        ]
+    }
+]
