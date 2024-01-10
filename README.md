@@ -8,7 +8,7 @@
 
 ## Platform
 
-#### Framework
+### Framework
 
 ![image](https://github.com/bryan2641/IOT_Fianl_Project/blob/main/framework.png)
 
