@@ -6,9 +6,7 @@
 
 ## Installation
 
-LibCity 只能从源代码安装。
-
-请执行以下命令获取源代码。
+Execute the following command to get the source code.
 
 ```shell
 git clone https://github.com/bryan2641/IOT_Fianl_Project.git
